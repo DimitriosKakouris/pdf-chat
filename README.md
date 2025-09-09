@@ -1,6 +1,6 @@
 # 📚 LangChain Document Q&A System
 
-> An intelligent document question-answering system powered by AWS Bedrock and LangChain
+> An intelligent document question-answering system powered by LangChain
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/streamlit-1.28+-red.svg)](https://streamlit.io/)
@@ -9,7 +9,7 @@
 
 ## 🌟 Overview
 
-Transform your documents into an interactive knowledge base! This application allows you to upload PDF or text documents and ask intelligent questions about their content using state-of-the-art AI models from AWS Bedrock.
+Transform your documents into an interactive knowledge base! This application allows you to upload PDF or text documents and ask intelligent questions about their content using state-of-the-art AI models.
 
 ## 🏗️ Architecture
 
