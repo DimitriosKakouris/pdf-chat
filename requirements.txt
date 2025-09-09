@@ -1,0 +1,10 @@
+langchain
+langchain-anthropic
+langchain-aws
+langchain-community
+chromadb
+pypdf
+python-dotenv
+streamlit
+faiss-cpu
+tiktoken
