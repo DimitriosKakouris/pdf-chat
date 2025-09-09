@@ -28,7 +28,7 @@ graph TD
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/DimitriosKakouris/pdf-chat.git
    cd langchain-qa
    ```
 
@@ -38,10 +38,7 @@ graph TD
    ```
 
 3. **Set up environment variables**
-   ```bash
-   cp .env.example .env
-   # Edit .env with your AWS credentials
-   ```
+   
 
 4. **Run the application**
    ```bash
@@ -132,5 +129,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - 🦜 **LangChain** - For the amazing framework
 - 🏛️ **AWS Bedrock** - For powerful AI models  
-- 🎨 **Streamlit** - For the beautiful UI framework
+- 🎨 **Streamlit** - For the UI framework
 - 🗄️ **ChromaDB** - For efficient vector storage
