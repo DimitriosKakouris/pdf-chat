@@ -45,7 +45,7 @@ graph TD
    streamlit run main.py
    ```
 
-5. **Open your browser** 🌐
+5. **Open your browser** 
    Navigate to `http://localhost:8501`
 
 ## 🔧 Configuration
@@ -73,12 +73,12 @@ The system uses:
 
 ```
 langchain-qa/
-├── 📄 main.py                 # Streamlit application entry point
-├── 🔧 qa_system.py           # Q&A system implementation
-├── 📚 document_loader.py     # Document processing utilities
-├── 📋 requirements.txt       # Python dependencies
-├── 📁 refdocs/              # Uploaded documents storage
-├── 🗄️ chroma_db/            # Vector database storage
+├── main.py                 # Streamlit application entry point
+├── qa_system.py           # Q&A system implementation
+├── document_loader.py     # Document processing utilities
+├── requirements.txt       # Python dependencies
+├── refdocs/              # Uploaded documents storage
+├── chroma_db/            # Vector database storage
 ```
 
 ## 🛠️ Technical Details
@@ -121,13 +121,13 @@ self.llm = ChatBedrock(
 ```
 
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ##  Acknowledgments
 
-- 🦜 **LangChain** - For the amazing framework
-- 🏛️ **AWS Bedrock** - For powerful AI models  
-- 🎨 **Streamlit** - For the UI framework
-- 🗄️ **ChromaDB** - For efficient vector storage
+- **LangChain** - For the amazing framework
+- **AWS Bedrock** - For powerful AI models  
+- **Streamlit** - For the UI framework
+- **ChromaDB** - For efficient vector storage
