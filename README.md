@@ -1,17 +1,18 @@
 # 📚 LangChain Document Q&A System
 
-> An intelligent document question-answering system powered by LangChain
+> An intelligent containerized document question-answering system powered by LangChain
 
 [![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/streamlit-1.28+-red.svg)](https://streamlit.io/)
 [![LangChain](https://img.shields.io/badge/langchain-latest-green.svg)](https://python.langchain.com/)
 [![AWS Bedrock](https://img.shields.io/badge/AWS-Bedrock-orange.svg)](https://aws.amazon.com/bedrock/)
+[![Docker](https://img.shields.io/badge/docker-24.0.6-blue.svg)](https://www.docker.com/)
 
-## 🌟 Overview
+## Overview
 
-Transform your documents into an interactive knowledge base! This application allows you to upload PDF or text documents and ask intelligent questions about their content using state-of-the-art AI models.
+Transform your documents into an interactive knowledge base! This application allows you to upload PDF or text documents and ask intelligent questions about their content using state-of-the-art AI models. All in a docker container!
 
-## 🏗️ Architecture
+## Architecture
 
 ```mermaid
 graph TD
@@ -26,29 +27,20 @@ graph TD
 
 ### 📦 Installation
 
-1. **Clone the repository**
+1. **Build Docker Image**
    ```bash
-   git clone https://github.com/DimitriosKakouris/pdf-chat.git
-   cd langchain-qa
+   docker build -t pdf-chat .
    ```
-
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Set up environment variables**
    
-
-4. **Run the application**
+2. **Run Docker Container**
    ```bash
-   streamlit run main.py
+   docker compose up
    ```
 
-5. **Open your browser** 
+3. **Open your browser** 
    Navigate to `http://localhost:8501`
 
-## 🔧 Configuration
+## Configuration
 
 ### Model Configuration
 
@@ -57,7 +49,7 @@ The system uses:
 - **Embeddings**: `amazon.titan-embed-text-v1`
 - **Vector Store**: ChromaDB with persistent storage
 
-## 📖 Usage
+## Usage
 
 ### 1. Upload Document 📄
 - Click "Upload a document" 
@@ -69,10 +61,10 @@ The system uses:
 - Get comprehensive answers (250+ words)
 - View source context and references
 
-## 🏢 Project Structure
+## Project Structure
 
 ```
-langchain-qa/
+pdf-chat/
 ├── main.py                 # Streamlit application entry point
 ├── qa_system.py           # Q&A system implementation
 ├── document_loader.py     # Document processing utilities
@@ -81,12 +73,12 @@ langchain-qa/
 ├── chroma_db/            # Vector database storage
 ```
 
-## 🛠️ Technical Details
+## Technical Details
 
 ### Document Processing Pipeline
 
 1. **Loading**: PyPDFLoader for PDFs, TextLoader for text files
-2. **Chunking**: RecursiveCharacterTextSplitter (1000 chars, 200 overlap)
+2. **Chunking**: RecursiveCharacterTextSplitter
 3. **Embedding**: AWS Bedrock Titan embeddings
 4. **Storage**: ChromaDB vector database with persistence
 
@@ -96,7 +88,7 @@ langchain-qa/
 - **Generation**: Claude Sonnet with custom prompt template
 - **Output**: Detailed 250+ word responses with context
 
-## 🎯 Customization
+## Customization
 
 ### Modify Chunk Size
 ```python
@@ -131,3 +123,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **AWS Bedrock** - For powerful AI models  
 - **Streamlit** - For the UI framework
 - **ChromaDB** - For efficient vector storage
+- **Docker** - For containerization 

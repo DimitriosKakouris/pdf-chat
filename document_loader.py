@@ -8,8 +8,8 @@ import os
 class DocumentProcessor:
     def __init__(self):
         self.text_splitter = RecursiveCharacterTextSplitter(
-            chunk_size=1000,
-            chunk_overlap=200
+            chunk_size=1500,
+            chunk_overlap=300
         )
         # Using Bedrock embeddings
         self.embeddings = BedrockEmbeddings(

@@ -46,7 +46,10 @@ class QASystem:
         qa_sys = RetrievalQA.from_chain_type(
             llm=self.llm,
             chain_type="stuff",
-            retriever=self.vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 3}),
+            retriever=self.vectorstore.as_retriever(
+                search_type="similarity",
+                search_kwargs={
+                    "k": 5}),
             return_source_documents=True,
             chain_type_kwargs={"prompt": PROMPT}
         )
